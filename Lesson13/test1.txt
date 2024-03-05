@@ -1,0 +1,7 @@
+-------------------------------------
+Name: Mike, Age: 65
+Name: Bob, Age: 23
+Name: Anna, Age: 21
+Name: Oliver, Age: 41
+Name: Andrew, Age: 19
+Name: Betty, Age: 21

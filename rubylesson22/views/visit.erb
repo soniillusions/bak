@@ -1,0 +1,29 @@
+<h2>Записаться</h2>
+<p>На этой странице вы можете запсиаться к нам в Barber Shop</p>
+
+<form action="/visit" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Ваше имя</label>
+    <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваше имя">
+  </div>
+
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Номер телефона</label>
+    <input name="phone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваш номер телефона">
+  </div>
+
+      <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Время записи</label>
+    <input name="datetime" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Когда вас ждать">
+  </div>
+
+  <label for="cars">Выберете парикмахера:</label>
+  <select name="barber" id="cars">
+    <option value="Walter White">Walter White</option>
+    <option value="Jessie Pinkman">Jessie Pinkman</option>
+    <option value="Gus Fring">Gus Fring</option>
+  </select>
+  <br><br>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

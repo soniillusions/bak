@@ -1,0 +1,2 @@
+Enter your password: 
+Your password is not weak

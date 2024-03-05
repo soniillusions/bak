@@ -1,0 +1,19 @@
+<h2>Contacts</h2>
+
+<form action="/contacts" method="POST">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input name="email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите адрес вашей электронной почты" value="<%= @email %>">
+    </div>
+
+        <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите ваше имя" value="<%= @name %>">
+    </div>
+
+    <p>Введите сообщение:</p>
+
+    <textarea name="usermessage" rows="4" cols="50" value="<%= @usermessage %>"></textarea> 
+
+  <button type="submit class="btn btn-primary>Submit</button>
+</form>

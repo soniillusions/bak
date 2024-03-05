@@ -1,0 +1,6 @@
+User: Ro, Phone: 4354654656, Date and time: 17 July at 12 PM
+User: Alex, Phone: 435435, Date and time: 17 July at 12 PM
+User: Vadim, Phone: 7777710101, Date and time: 17 July at 12 PM
+User: Adam, Phone: 432432, Date and time: July 15, Barber: jessie
+User: Adam, Phone: 212112313211, Date and time: July 15, Barber: Gus Fring
+User: 123321, Phone: 3332211, Date and time: 41, Barber: Gus Fring, Color: #dbadff
