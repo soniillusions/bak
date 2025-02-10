@@ -1,0 +1,8 @@
+<% @posts.each do |post| %>
+  <p>
+    Content: <%= post.content %>
+  </p>
+
+  <%= link_to 'Show', post_path(post), class: 'custom-link' %>
+  <hr />
+<% end %>

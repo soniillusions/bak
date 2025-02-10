@@ -1,0 +1,19 @@
+<%= form_for :post, url: user_posts_path(current_user), data: {turbo:false} do |f| %>
+  <% if @post && @post.errors.any? %>
+    <p>
+    <ul>
+      <% @post.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+    </p>
+  <% end %>
+
+
+  <%= f.label :content%>
+  <%= f.text_field :content, class: 'form-control', style: 'height: 200px;' %>
+
+
+  <%= f.submit class: 'btn btn-primary' %>
+
+<% end %>

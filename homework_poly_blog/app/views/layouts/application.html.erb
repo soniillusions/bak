@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PolyBlog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
+    <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js' %>
+  </head>
+
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <% if notice.present? %>
+          <p class="notice"><%= notice %></p>
+        <% end %>
+
+        <% if alert.present? %>
+          <p class="alert"><%= alert %></p>
+        <% end %>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+
+  <div class="comtainer">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">poly-blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="<%= posts_path %>">Posts</a>
+                </li>
+                <% if current_user %>
+                  <li class="nav-item">
+                    <a class="nav-link" href="<%= new_user_post_path(current_user) %>">New post</a>
+                  </li>
+                <% end %>
+              </ul>
+
+              <ul class="navbar-nav ml-auto d-flex align-items-center">
+                <% if user_signed_in? %>
+                  <li class="nav-item">
+                    <span>Здравствуйте, <%= current_user.email %></span>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/users/sign_out" data-turbo-method="delete">Sign out</a>
+                  </li>
+                <% else %>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/users/sign_in">Sign in</a>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="col-3"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <%= yield %>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+  </body>
+</html>

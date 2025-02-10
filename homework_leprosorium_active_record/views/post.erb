@@ -1,0 +1,39 @@
+<%= @post.message %>
+<br />
+<br />
+Author: <%= @post.username %>
+<hr />
+
+<form action="/post/<%= @post.id %>" method="POST">
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Оставить комментарий:</label>
+    <textarea name="comment[message]" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+  <div class="col-auto">
+    <label for="exampleInputPassword1" class="form-label">Введите ваше имя:</label>
+    <input name="comment[username]" type="username" class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <!-- Скрытое поле для post_id -->
+  <input type="hidden" name="comment[post_id]" value="<%= @post.id %>">
+
+  <br />
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <hr />
+</form>
+
+Комментарии:
+  <hr />
+  <br />
+
+<% @comments.each do |comment| %>
+  <%= comment['message'] %>
+    <br />
+  Author:
+  <%= comment['username'] %>
+    <br />
+  <%= comment['datestamp'] %>
+    <br />
+    <hr />
+<% end %>

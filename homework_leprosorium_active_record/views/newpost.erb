@@ -1,0 +1,19 @@
+<h2>Новый пост</h2>
+
+<form action="/newpost" method="POST">
+  <p>
+
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Введите текст поста:</label>
+    <textarea name="post2[message]" class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+  </div>
+
+  <div class="col-auto">
+    <label for="exampleInputPassword1" class="form-label">Enter your name:</label>
+    <input name="post2[username]" type="username" class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <br />
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </p>
+</form>

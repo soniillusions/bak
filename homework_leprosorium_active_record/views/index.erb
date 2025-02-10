@@ -1,0 +1,16 @@
+<h2>Посты</h2>
+
+<% @posts.each do |post| %>
+  <p>
+    <%= post['message'] %>
+    <br />
+    <br />
+
+    Author: <%= post['username'] %>
+    <br />
+    <a href="/post/<%= post['id'] %>">Подробнее</a>
+    <hr />
+  </p>
+<% end %>
+
+
